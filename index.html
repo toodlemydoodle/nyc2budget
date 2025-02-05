@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Itinerary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .itinerary {
+            margin: 20px 0;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+        .time {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .location {
+            font-size: 1.1em;
+        }
+        .location a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .location a:hover {
+            text-decoration: underline;
+        }
+        .activity {
+            margin-top: 5px;
+            font-size: 0.95em;
+            color: #6c757d;
+        }
+        .qr img {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <!-- Countdown Timer -->
+        <div class="countdown" id="countdown"></div>
+
+        <h1>NYC Itinerary for February 6, 2024</h1>
+    
+        <div class="itinerary">
+            <div class="time">8:00 AM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/7RECBksJUSU2bApu8" target="_blank">La Colombe Coffee Workshop</a>
+                <div class="activity">Start with artisan coffee & breakfast</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">9:00 AM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/r5xBYivXkXiPTAaKA" target="_blank">Brooklyn Bridge</a>
+                <div class="activity">Walk across the historic bridge</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">10:00 AM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/9ZD6eEaFzsrGvY1Y9" target="_blank">Staten Island Ferry Terminal</a>
+                <div class="activity">Free ferry ride past Statue of Liberty</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">11:30 AM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/E8zNK1VnUU3gumi1A" target="_blank">9/11 Memorial</a>
+                <div class="activity">Visit memorial and observation deck</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">12:30 PM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/WCtAmMqM5wbCAuQV6" target="_blank">Hao Noodle Chelsea</a>
+                <div class="activity">Lunch - modern Chinese dishes</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">2:30 PM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/8Vu6z84Jeb677VDq6" target="_blank">The High Line</a>
+                <div class="activity">Walk elevated park from Meatpacking to Hudson Yards</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">3:30 PM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/XvTtZwz7rf5bLr5X6" target="_blank">Hudson Yards</a>
+                <div class="activity">Explore Vessel and shops</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">4:30 PM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/wKM6jrW2HyaRxWaLA" target="_blank">Pier 40 & Little Island</a>
+                <div class="activity">Explore waterfront park and unique floating island</div>
+            </div>
+        </div>
+    
+        <div class="itinerary">
+            <div class="time">5:00 PM</div>
+            <div class="location">
+                <a href="https://maps.app.goo.gl/upWmNWA2nq72cqYi8" target="_blank">Grand Central Terminal</a>
+                <div class="activity">Concert at Yale</div>
+            </div>
+        </div>
+    </body>
+    <script>
+        // Countdown Timer
+        const countdown = document.getElementById('countdown');
+        const tripDate = new Date('2025-02-14T08:00:00');
+        const updateCountdown = () => {
+            const now = new Date();
+            const diff = tripDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until the trip!`;
+        };
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>    
+</html>
